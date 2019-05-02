@@ -23,20 +23,21 @@ void add(vector<int> &arr, int elem) {
 }
 
 void insert_at_index(vector<int> &arr, unsigned int index, int elem) {
-    if (index > arr.size() - 1) {
+    long arr_length = arr.size();
+    if (index > arr_length - 1) {
         return;
-    } else if (arr.size() == 1) {
+    } else if (arr_length == 1) {
         arr[0] = elem;
     } else {
-        arr.push_back(arr[arr.size()-1]);
-        arr[arr.size() - 2] = arr[arr.size() - 3];
+        arr.push_back(arr[arr_length - 1]);
+        arr[arr_length - 1] = arr[arr_length - 2];
         arr[index] = elem;
     }
 }
 
 int main(int argc, const char * argv[]) {
-    vector<int> v = {1, 2, 9};
-    insert_at_index(v, 1, 3);
+    vector<int> v = {7, 8};
+    insert_at_index(v, 0, 11);
     display(v);
     
     return 0;
