@@ -29,15 +29,19 @@ void insert_at_index(vector<int> &arr, unsigned int index, int elem) {
     } else if (arr_length == 1) {
         arr[0] = elem;
     } else {
-        arr.push_back(arr[arr_length - 1]);
-        arr[arr_length - 1] = arr[arr_length - 2];
+        arr.push_back(0);
+        for (int i = (int)arr.size() - 1; i > index; --i) {
+            arr[i] = arr[i-1];
+        }
         arr[index] = elem;
     }
 }
 
 int main(int argc, const char * argv[]) {
-    vector<int> v = {7, 8};
-    insert_at_index(v, 0, 11);
+    vector<int> v = {7, 8, 9, 2, 3, 5};
+    
+    insert_at_index(v, 5, 11);
+
     display(v);
     
     return 0;
