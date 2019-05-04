@@ -109,6 +109,7 @@ void insert_sorted_array(vector<int> &arr, int n) {
     arr[i+1] = n;
 }
 
+// in a sorted list
 bool is_sorted(vector<int> &arr) {
     for (int i = 0; i < arr.size() - 1; ++i) {
         if (arr[i] > arr[i + 1]) {
@@ -131,8 +132,49 @@ void arrange_negative_left_positive_right(vector<int> &arr) {
     }
 }
 
+// sorted arrays
+vector<int> merge_sorted_arrays(vector<int> &a, vector<int> &b) {
+    int i = 0, j = 0, m = (int)a.size(), n = (int)b.size();
+    
+    vector<int> out;
+    
+    while (i < m && j < n) {
+        if (a[i] < b[i]) {
+            out.push_back(a[i]);
+            ++i;
+        } else {
+            out.push_back(b[j]);
+            j++;
+        }
+    }
+    
+    while (i < m) {
+        out.push_back(a[i]);
+        i++;
+    }
+    
+    while (j < n) {
+        out.push_back(b[j]);
+        j++;
+    }
+    
+    return out;
+}
+
+// non sorted
+void remove_duplicates(vector<int> &arr) {
+    int lastDuplicate = 0;
+    
+    for (int i = 0; i < arr.size(); ++i) {
+        if (arr[i] == arr[i + 1] && arr[i] != lastDuplicate) {
+            arr.erase(arr.begin() + i);
+            lastDuplicate = arr[i];
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
-    vector<int> v = {1, -3, -2, 9};
+    vector<int> a = {1, 2, 2, 3, 5, 6, 6, 7};
     
 //    insert_at_index(v, 5, 11);
 //    delete_at_index(v, 0);
@@ -142,8 +184,11 @@ int main(int argc, const char * argv[]) {
 //    insert_sorted_array(v, 4);
     
 //    cout << is_sorted(v);
-    arrange_negative_left_positive_right(v);
-    display(v);
+//    arrange_negative_left_positive_right(v);
+//    vector<int> o = merge_sorted_arrays(a, b);
+//    remove_duplicates(a);
+    
+    display(a);
     
     return 0;
 }
