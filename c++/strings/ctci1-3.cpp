@@ -10,6 +10,7 @@
 
 using namespace std;
 
+// T: O(n) / S: O(1)
 void urlify(string &str, int len) {
     int countSpaces = 0;
     for (int i = 0; i < len; ++i) {

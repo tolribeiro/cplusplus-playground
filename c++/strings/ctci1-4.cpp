@@ -11,6 +11,7 @@
 
 using namespace std;
 
+// T: O(n) / S: O(n)
 bool is_palindrome_perm(string str) {
     unordered_map<char, int> h;
     
