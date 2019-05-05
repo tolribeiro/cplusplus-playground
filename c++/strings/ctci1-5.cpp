@@ -27,6 +27,9 @@ bool one_away(string s1, string s2) {
             if (count == 1)
                 return false;
             
+            // core of procedure, how to move
+            // indexes based on length of strings
+            // once the characters are already different
             if (m > n) {
                 i++;
             } else if (m < n) {
