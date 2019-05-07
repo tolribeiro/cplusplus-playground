@@ -10,7 +10,6 @@
 
 using namespace std;
 
-// T: O(n) / S: O(1)
 string compressed_string(string str) {
     if (str.length() == 1) {
         return str;
@@ -35,7 +34,7 @@ string compressed_string(string str) {
 }
 
 int main () {
-    string str = "abbbbbbbbbbbb";
+    string str = "wwwwaaadexxxxxx";
     
     cout << compressed_string(str) << endl;
     
