@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <queue>
 #include "binary_tree_prototype.h"
 
 void in_order(unique_ptr<TreeNode<int>> &tree) {
@@ -36,13 +37,24 @@ void post_order(unique_ptr<TreeNode<int>> &tree) {
     cout << tree->data << endl;
 }
 
-void level_order(unique_ptr<TreeNode<int>> &tree) {
-    if (tree == nullptr) {
-        return;
-    }
-    in_order(tree->left);
+void print_by_level(const unique_ptr<TreeNode<int>>& tree) {
+    queue<TreeNode<int>*> q;
+    
     cout << tree->data << endl;
-    in_order(tree->right);
+    q.emplace(tree.get());
+    
+    while (!q.empty()) {
+        auto curr = q.front();
+        q.pop();
+        if (curr->left) {
+            cout << curr->left->data << endl;
+            q.emplace(curr->left.get());
+        }
+        if (curr->right) {
+            cout << curr->right->data << endl;
+            q.emplace(curr->right.get());
+        }
+    }
 }
 
 int main () {
@@ -59,6 +71,9 @@ int main () {
     tree->right = make_unique<TreeNode<int>>(TreeNode<int>{
         5, nullptr, nullptr});
     
-    in_order(tree);
+//    in_order(tree);
+    
+    print_by_level(tree);
+    
     return 0;
 }
