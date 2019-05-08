@@ -82,6 +82,22 @@ void insert_after_data(shared_ptr<ListNode<T>> &head,
 }
 
 template <typename T>
+void reverse_ll(shared_ptr<ListNode<T>> &head) {
+    shared_ptr<ListNode<T>> r = nullptr;
+    shared_ptr<ListNode<T>> q = nullptr;
+    shared_ptr<ListNode<T>> p = head;
+    
+    while (p != nullptr) {
+        r = q;
+        q = p;
+        p = p->next;
+        q->next = r;
+    }
+    head = q;
+}
+
+
+template <typename T>
 void delete_node(shared_ptr<ListNode<T>> &head,
                        int key) {
     shared_ptr<ListNode<T>> it = head;
@@ -164,6 +180,8 @@ int main () {
 //    insert_after_data(L, 7);
 //    delete_node(L, 5);
 //    print_ll(L);
-    cout << check_if_sorted(L) << endl;
+//    cout << check_if_sorted(L) << endl;
+    reverse_ll(L);
+    print_ll(L);
     return 0;
 }
