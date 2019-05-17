@@ -10,7 +10,7 @@
 #include "linked_list_prototype.h"
 
 template <typename T>
-// recursive
+// Print list recursively
 void print_ll(shared_ptr<ListNode<T>> head) {
     if (head) {
         cout << "(" << head->data << ")";
@@ -20,7 +20,7 @@ void print_ll(shared_ptr<ListNode<T>> head) {
 }
 
 template <typename T>
-// iteratively
+// Print list iteratively
 void print_ll_it(shared_ptr<ListNode<T>> head) {
     while (head) {
         cout << "(" << head->data << ")";
@@ -51,13 +51,15 @@ int max_elem(shared_ptr<ListNode<T>> head) {
 }
 
 template <typename T>
+// Insert given node at head
 void insert_at_head(shared_ptr<ListNode<T>> &head,
-                      shared_ptr<ListNode<T>> &new_node) {
+                    shared_ptr<ListNode<T>> &new_node) {
     new_node->next = head;
     head = new_node;
 }
 
 template <typename T>
+// Insert given node at tail
 void insert_at_tail(shared_ptr<ListNode<T>> &head,
                     shared_ptr<ListNode<T>> new_node) {
     shared_ptr<ListNode<T>> it = head;
@@ -69,6 +71,7 @@ void insert_at_tail(shared_ptr<ListNode<T>> &head,
 }
 
 template <typename T>
+// Insert node after a specific key
 void insert_after_data(shared_ptr<ListNode<T>> &head,
                        int key) {
     shared_ptr<ListNode<int>> new_node = make_shared<ListNode<int>>(ListNode<int>{
@@ -181,7 +184,7 @@ int main () {
 //    delete_node(L, 5);
 //    print_ll(L);
 //    cout << check_if_sorted(L) << endl;
-    reverse_ll(L);
+//    reverse_ll(L);
     print_ll(L);
     return 0;
 }
