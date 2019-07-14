@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62E37C4E228EF6A80075FB4E /* playground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62E37C4D228EF6A80075FB4E /* playground.cpp */; };
+		629F5ADB22DB955500436973 /* basic_recursion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 629F5ADA22DB955500436973 /* basic_recursion.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +38,8 @@
 		62253B3D227F84CF00980445 /* operations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = operations.cpp; sourceTree = "<group>"; };
 		62253B412281339500980445 /* binary_tree_prototype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = binary_tree_prototype.h; sourceTree = "<group>"; };
 		62253B42228133B400980445 /* operations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = operations.cpp; sourceTree = "<group>"; };
+		629F5AD622DB905E00436973 /* Rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle.cpp; sourceTree = "<group>"; };
+		629F5ADA22DB955500436973 /* basic_recursion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = basic_recursion.cpp; sourceTree = "<group>"; };
 		62E37C4D228EF6A80075FB4E /* playground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playground.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,8 @@
 		621A24C4227B87930088DD50 /* c++ */ = {
 			isa = PBXGroup;
 			children = (
+				629F5AD922DB953200436973 /* recursion */,
+				629F5AD522DB903900436973 /* classes */,
 				62253B31227EC37100980445 /* trees */,
 				62253B30227EC36300980445 /* linked_lists */,
 				62253B2E227EC34B00980445 /* stacks_queues */,
@@ -128,6 +132,22 @@
 				62253B42228133B400980445 /* operations.cpp */,
 			);
 			path = trees;
+			sourceTree = "<group>";
+		};
+		629F5AD522DB903900436973 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				629F5AD622DB905E00436973 /* Rectangle.cpp */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		629F5AD922DB953200436973 /* recursion */ = {
+			isa = PBXGroup;
+			children = (
+				629F5ADA22DB955500436973 /* basic_recursion.cpp */,
+			);
+			path = recursion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62E37C4E228EF6A80075FB4E /* playground.cpp in Sources */,
+				629F5ADB22DB955500436973 /* basic_recursion.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
