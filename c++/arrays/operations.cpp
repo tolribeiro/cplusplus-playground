@@ -19,11 +19,14 @@ void display(vector<int> &arr) {
     cout << endl;
 }
 
+// Append
 void add(vector<int> &arr, int elem) {
     arr.push_back(elem);
 }
 
-void insert_at_index(vector<int> &arr, unsigned int index, int elem) {
+// Add at index
+void insert_at_index(vector<int> *v, unsigned int index, int elem) {
+    vector<int> &arr = *v;
     long arr_length = arr.size();
     if (index > arr_length - 1) {
         return;
@@ -32,7 +35,7 @@ void insert_at_index(vector<int> &arr, unsigned int index, int elem) {
         arr[0] = elem;
     } else {
         arr.push_back(0);
-        for (int i = (int)arr.size() - 1; i > index; --i) {
+        for (int i = (int)arr_length - 1; i > index; --i) {
             arr[i] = arr[i-1];
         }
         arr[index] = elem;
@@ -176,7 +179,7 @@ void remove_duplicates(vector<int> &arr) {
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 2, 2, 3, 5, 6, 6, 7};
     
-//    insert_at_index(v, 5, 11);
+    insert_at_index(&a, 5, 11);
 //    delete_at_index(v, 0);
 //    cout << binary_search(v, 7) << endl;
 //    reverse_in_place(v);
