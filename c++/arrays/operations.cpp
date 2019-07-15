@@ -12,6 +12,7 @@
 
 using namespace std;
 
+// Display
 void display(vector<int> &arr) {
     for (int &elem : arr) {
         cout << elem << " ";
@@ -42,7 +43,9 @@ void insert_at_index(vector<int> *v, unsigned int index, int elem) {
     }
 }
 
-void delete_at_index(vector<int> &arr, int index) {
+// Delete at index
+void delete_at_index(vector<int> *v, int index) {
+    vector<int> &arr = *v;
     long arr_length = arr.size();
     if (index > arr_length - 1 || arr_length == 1) {
         return;
@@ -71,6 +74,7 @@ int binary_search(vector<int> &arr, int key) {
     return -1;
 }
 
+// Reverse array in place
 void reverse_in_place(vector<int> &arr) {
     int i = 0;
     int j = (int)arr.size() - 1;
