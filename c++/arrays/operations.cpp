@@ -89,6 +89,40 @@ void reverse_in_place(vector<int> &arr) {
     }
 }
 
+
+// left shift - insert 0 at remaining
+// or erase it
+void left_shift(vector<int> *v) {
+    vector<int> &arr = *v;
+    int arr_size = (int)arr.size() - 1;
+    int i;
+    
+    for (i = 0; i < arr_size; ++i) {
+        arr[i] = arr[i + 1];
+    }
+//    arr[i] = 0;
+//  or
+    arr.erase(arr.begin() + arr_size);
+}
+
+void insert_in_sorted_array(vector<int> *v, int n) {
+    vector<int> &arr = *v;
+//    3, 6, 8
+//    n = 5
+//    3, 5, 6, 8
+    
+//    3, 6, 8, 0
+//    3, 6, 8, 8
+    arr.push_back(0);
+    int i = (int)arr.size() - 2;
+    
+    while (arr[i] > n) {
+        arr[i + 1] = arr[i];
+        --i;
+    }
+    arr[i + 1] = n;
+}
+
 void left_rotate_by_one(vector<int> &arr) {
     int temp = arr[0];
     int i;
@@ -181,9 +215,13 @@ void remove_duplicates(vector<int> &arr) {
 }
 
 int main(int argc, const char * argv[]) {
-    vector<int> a = {1, 2, 2, 3, 5, 6, 6, 7};
+    vector<int> a = {1, 7};
+
     
-    insert_at_index(&a, 5, 11);
+//    insert_at_index(&a, 5, 11);
+//    left_shift(&a);
+    insert_in_sorted_array(&a, 5);
+    display(a);
 //    delete_at_index(v, 0);
 //    cout << binary_search(v, 7) << endl;
 //    reverse_in_place(v);
@@ -195,7 +233,7 @@ int main(int argc, const char * argv[]) {
 //    vector<int> o = merge_sorted_arrays(a, b);
 //    remove_duplicates(a);
     
-    display(a);
+//    display(a);
     
     return 0;
 }
