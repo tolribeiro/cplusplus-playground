@@ -29,6 +29,7 @@ void print_ll_it(shared_ptr<ListNode<T>> head) {
 }
 
 template <typename T>
+// Count number of nodes
 int count_nodes(shared_ptr<ListNode<T>> head) {
     int count = 0;
     while (head) {
@@ -39,6 +40,7 @@ int count_nodes(shared_ptr<ListNode<T>> head) {
 }
 
 template <typename T>
+// Find max element
 int max_elem(shared_ptr<ListNode<T>> head) {
     int max = INT_MIN;
     while (head) {
