@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		623C267222DCF2B2004FC989 /* operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 621A24C5227B87930088DD50 /* operations.cpp */; };
+		621DE50822E01D24009FC29D /* check_if_anagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 621DE50722E01D24009FC29D /* check_if_anagram.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		621A24C2227B87930088DD50 /* c++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "c++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		621A24C5227B87930088DD50 /* operations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = operations.cpp; sourceTree = "<group>"; };
+		621DE50722E01D24009FC29D /* check_if_anagram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = check_if_anagram.cpp; sourceTree = "<group>"; };
 		62253B22227D220200980445 /* ctci1-1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ctci1-1.cpp"; sourceTree = "<group>"; };
 		62253B24227D273800980445 /* ctci1-2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ctci1-2.cpp"; sourceTree = "<group>"; };
 		62253B26227E032200980445 /* ctci1-3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ctci1-3.cpp"; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				62253B28227E0CA200980445 /* ctci1-4.cpp */,
 				62253B2A227E135600980445 /* ctci1-5.cpp */,
 				62253B2C227E6ECD00980445 /* ctci1-6.cpp */,
+				621DE50722E01D24009FC29D /* check_if_anagram.cpp */,
 			);
 			path = strings;
 			sourceTree = "<group>";
@@ -210,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				623C267222DCF2B2004FC989 /* operations.cpp in Sources */,
+				621DE50822E01D24009FC29D /* check_if_anagram.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
