@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		621DE50822E01D24009FC29D /* check_if_anagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 621DE50722E01D24009FC29D /* check_if_anagram.cpp */; };
+		621DE50C22E390D8009FC29D /* operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62253B42228133B400980445 /* operations.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +26,7 @@
 		621A24C2227B87930088DD50 /* c++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "c++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		621A24C5227B87930088DD50 /* operations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = operations.cpp; sourceTree = "<group>"; };
 		621DE50722E01D24009FC29D /* check_if_anagram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = check_if_anagram.cpp; sourceTree = "<group>"; };
+		621DE50A22E3905C009FC29D /* operations_regular_pointers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = operations_regular_pointers.cpp; sourceTree = "<group>"; };
 		62253B22227D220200980445 /* ctci1-1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ctci1-1.cpp"; sourceTree = "<group>"; };
 		62253B24227D273800980445 /* ctci1-2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ctci1-2.cpp"; sourceTree = "<group>"; };
 		62253B26227E032200980445 /* ctci1-3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ctci1-3.cpp"; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 			children = (
 				62253B412281339500980445 /* binary_tree_prototype.h */,
 				62253B42228133B400980445 /* operations.cpp */,
+				621DE50A22E3905C009FC29D /* operations_regular_pointers.cpp */,
 			);
 			path = trees;
 			sourceTree = "<group>";
@@ -212,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				621DE50822E01D24009FC29D /* check_if_anagram.cpp in Sources */,
+				621DE50C22E390D8009FC29D /* operations.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
