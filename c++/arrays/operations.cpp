@@ -214,14 +214,29 @@ void remove_duplicates(vector<int> &arr) {
     }
 }
 
+// find peak in array that goes up and down
+int findPeak(vector<int> input) {
+    int i = 0;
+    int j = (int)input.size()-1;
+    int mid = (i+j)/2;
+    int peak = input[mid];
+    
+    while (input[mid + 1] > peak) {
+        peak = input[mid + 1];
+        mid++;
+    }
+    return peak;
+}
+
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
     
 //    insert_at_index(&a, 5, 11);
 //    left_shift(&a);
-    insert_in_sorted_array(&a, 5);
-    display(a);
+//    insert_in_sorted_array(&a, 5);
+//    display(a);
 //    delete_at_index(v, 0);
 //    cout << binary_search(v, 7) << endl;
 //    reverse_in_place(v);
@@ -235,5 +250,11 @@ int main(int argc, const char * argv[]) {
     
 //    display(a);
     
+    vector<int> input = {1, 2, 3, 5, 4, 3};
+    vector<int> input2 = {1, 1, 888, 889, 890, 1};
+    cout << findPeak(input2) << endl;
+    
     return 0;
 }
+
+//
