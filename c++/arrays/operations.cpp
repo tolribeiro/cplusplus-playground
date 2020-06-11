@@ -246,6 +246,23 @@ void odd(int L) {
     }
 }
 
+void decToBin(int baseTen) {
+    vector<string> out;
+    int res = baseTen;
+    int rem;
+    
+    if (!baseTen) cout << "0";
+    
+    while (res != 0) {
+        rem = res % 2;
+        res = res / 2;
+        out.push_back(to_string(rem));
+    }
+    
+    for (short i = out.size() - 1; i >= 0; --i) {
+        cout << out[i] << " ";
+    }
+}
 
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
@@ -272,9 +289,32 @@ int main(int argc, const char * argv[]) {
 //    vector<int> input2 = {1, 1, 888, 889, 890, 1};
 //    cout << findPeak(input2) << endl;
     
-    even(15);
+//    even(15);
+//    cout << endl;
+//    odd(15);
+//    cout << endl;
+    
+    decToBin(125);
     cout << endl;
-    odd(15);
+    decToBin(1);
+    cout << endl;
+    decToBin(0);
+    cout << endl;
+    decToBin(10);
+    cout << endl;
+    decToBin(8);
+    cout << endl;
+    decToBin(4);
+    cout << endl;
+    decToBin(2);
+    cout << endl;
+    decToBin(18);
+    cout << endl;
+    decToBin(7);
+    cout << endl;
+    decToBin(13);
+    cout << endl;
+    decToBin(9);
     cout << endl;
     
     return 0;
