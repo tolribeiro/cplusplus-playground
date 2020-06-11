@@ -264,6 +264,43 @@ void decToBin(int baseTen) {
     }
 }
 
+void tabuada() {
+    for (int i = 1; i <= 9; ++i) {
+        for (int j = 1; j <= 9; ++j) {
+            cout << i << "x" << j << "=" << i * j;
+            cout << "\t";
+            cout << i << "/" << j << "=" << i / j;
+            cout << "\t";
+            cout << i << "+" << j << "=" << i + j;
+            cout << "\t";
+            cout << i << "-" << j << "=" << i - j;
+            cout << "\n";
+        }
+        cout << "\n";
+    }
+}
+
+void printStars(int n) {
+    for (int i = 0; i < n; ++i) {
+        cout << "*";
+    }
+    cout << "\n";
+}
+
+void columnGraph(int a, int b, int c, int in) {
+    int higher = a;
+    
+    if (b > a && b > c) {
+        higher = b;
+    } else if (c > a && c > b) {
+        higher = c;
+    }
+    int divider = higher / in;
+    printStars(a / divider);
+    printStars(b / divider);
+    printStars(in);
+}
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
@@ -294,28 +331,31 @@ int main(int argc, const char * argv[]) {
 //    odd(15);
 //    cout << endl;
     
-    decToBin(125);
-    cout << endl;
-    decToBin(1);
-    cout << endl;
-    decToBin(0);
-    cout << endl;
-    decToBin(10);
-    cout << endl;
-    decToBin(8);
-    cout << endl;
-    decToBin(4);
-    cout << endl;
-    decToBin(2);
-    cout << endl;
-    decToBin(18);
-    cout << endl;
-    decToBin(7);
-    cout << endl;
-    decToBin(13);
-    cout << endl;
-    decToBin(9);
-    cout << endl;
+//    decToBin(125);
+//    cout << endl;
+//    decToBin(1);
+//    cout << endl;
+//    decToBin(0);
+//    cout << endl;
+//    decToBin(10);
+//    cout << endl;
+//    decToBin(8);
+//    cout << endl;
+//    decToBin(4);
+//    cout << endl;
+//    decToBin(2);
+//    cout << endl;
+//    decToBin(18);
+//    cout << endl;
+//    decToBin(7);
+//    cout << endl;
+//    decToBin(13);
+//    cout << endl;
+//    decToBin(9);
+//    cout << endl;
+//    tabuada();
+    columnGraph(2, 8, 20, 10);
+    cout << "\n";
     
     return 0;
 }
