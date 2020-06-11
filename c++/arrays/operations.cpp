@@ -228,6 +228,24 @@ int findPeak(vector<int> input) {
     return peak;
 }
 
+void even(int L) {
+    int init = 2;
+    
+    while (L > init) {
+        cout << init << " ";
+        init += 2;
+    }
+}
+
+void odd(int L) {
+    int init = 1;
+    
+    while (L > init) {
+        cout << init << " ";
+        init += 2;
+    }
+}
+
 
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
@@ -250,9 +268,14 @@ int main(int argc, const char * argv[]) {
     
 //    display(a);
     
-    vector<int> input = {1, 2, 3, 5, 4, 3};
-    vector<int> input2 = {1, 1, 888, 889, 890, 1};
-    cout << findPeak(input2) << endl;
+//    vector<int> input = {1, 2, 3, 5, 4, 3};
+//    vector<int> input2 = {1, 1, 888, 889, 890, 1};
+//    cout << findPeak(input2) << endl;
+    
+    even(15);
+    cout << endl;
+    odd(15);
+    cout << endl;
     
     return 0;
 }
