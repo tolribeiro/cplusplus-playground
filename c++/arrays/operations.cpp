@@ -9,6 +9,7 @@
 #include <iostream>
 #include <vector>
 #include <math.h>
+#include <map>
 
 using namespace std;
 
@@ -301,6 +302,45 @@ void columnGraph(int a, int b, int c, int in) {
     printStars(in);
 }
 
+bool isDigitLog(string s) {
+    string str = s.substr(s.find(" ") + 1);
+
+    for (char &c : str) {
+        if (c != ' ' && !(c - '0' >= 0 && c - '0' <= 9)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+vector<string> reorderLogFiles(vector<string>& logs) {
+    vector<int>indexArr;
+    vector<string> letterArr;
+    map<string, string> h;
+
+    for (int i = 0; i < logs.size(); ++i) {
+        if (isDigitLog(logs[i])) {
+            indexArr.push_back(i);
+        } else {
+            string logWithNoId = logs[i].substr(logs[i].find(" ") + 1);
+            string logId = logs[i].substr(0, logs[i].find(" "));
+            
+            h[logWithNoId + logId] = logs[i];
+        }
+    }
+
+    for (auto hItem : h) {
+        letterArr.push_back(hItem.second);
+    }
+
+    for (int i = 0; i < indexArr.size(); ++i) {
+        letterArr.push_back(logs[indexArr[i]]);
+    }
+
+    return letterArr;
+}
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
@@ -354,8 +394,12 @@ int main(int argc, const char * argv[]) {
 //    decToBin(9);
 //    cout << endl;
 //    tabuada();
-    columnGraph(2, 8, 20, 10);
-    cout << "\n";
+//    columnGraph(2, 8, 20, 10);
+//    cout << "\n";
+    
+    vector<string> in = {"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo","a2 act car"};
+    
+    reorderLogFiles(in);
     
     return 0;
 }
