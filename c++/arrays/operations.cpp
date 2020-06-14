@@ -341,6 +341,26 @@ vector<string> reorderLogFiles(vector<string>& logs) {
     return letterArr;
 }
 
+// Leetcode 121
+int maxProfit(vector<int>& prices) {
+    long prices_size = prices.size() - 1;
+    int max_prof = 0;
+    int greatest = prices[prices_size];
+    
+    if (prices_size < 1 || prices_size == 0) return 0;
+    
+    for (long i = prices_size - 1; i >= 0; --i) {
+        if (prices[i] > greatest) {
+            greatest = prices[i];
+        } else if (prices[i] < greatest) {
+            if (greatest - prices[i] > max_prof) {
+                max_prof = greatest - prices[i];
+            }
+        }
+    }
+    return max_prof;
+}
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
