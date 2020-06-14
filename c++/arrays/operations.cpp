@@ -361,6 +361,37 @@ int maxProfit(vector<int>& prices) {
     return max_prof;
 }
 
+//Leetcode 415
+string addStrings(string num1, string num2) {
+    int carry = 0;
+    long i = num1.size() - 1;
+    long j = num2.size() - 1;
+    string out;
+
+    while (i >= 0 || j >= 0) {
+        int sum = carry;
+        if (i >= 0) {
+            sum += num1[i] - '0';
+            i--;
+        }
+        if (j >= 0) {
+            sum += num2[j] - '0';
+            --j;
+        }
+        carry = sum / 10;
+        sum = sum % 10;
+        out += (sum + '0');
+    }
+
+    // in case both are single digits
+    if (carry != 0) {
+        out += (carry + '0');
+    }
+    
+    reverse(out.begin(), out.end());
+    return out;
+}
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
@@ -417,9 +448,11 @@ int main(int argc, const char * argv[]) {
 //    columnGraph(2, 8, 20, 10);
 //    cout << "\n";
     
-    vector<string> in = {"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo","a2 act car"};
+//    vector<string> in = {"a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo","a2 act car"};
+//
+//    reorderLogFiles(in);
     
-    reorderLogFiles(in);
+    addStrings("1", "9");
     
     return 0;
 }
