@@ -10,6 +10,7 @@
 #include <vector>
 #include <math.h>
 #include <map>
+#include <unordered_set>
 
 using namespace std;
 
@@ -392,6 +393,24 @@ string addStrings(string num1, string num2) {
     return out;
 }
 
+bool isHappy(int n) {
+    unordered_set<int> seen;
+    
+    // 19
+    while (n != 1) {
+        int curr = n; // 19
+        int sum = 0;
+        while (curr != 0) {
+            sum += (curr % 10) * (curr % 10);
+            curr /= 10;
+        }
+        if (seen.find(sum) != seen.end()) return false;
+        seen.insert(sum);
+        n = sum;
+    }
+    return true;
+}
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
@@ -452,7 +471,7 @@ int main(int argc, const char * argv[]) {
 //
 //    reorderLogFiles(in);
     
-    addStrings("1", "9");
+//    addStrings("1", "9");
     
     return 0;
 }
