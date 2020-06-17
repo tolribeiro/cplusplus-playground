@@ -411,6 +411,23 @@ bool isHappy(int n) {
     return true;
 }
 
+// Leetcode 509
+int fib(int N) {
+    int sum = 0;
+    if (N == 0) return 0;
+    else if (N == 1) return 1;
+    else {
+        int x = 0;
+        int y = 1;
+        for (int i = 0; i < N - 1; ++i) {
+            sum = x + y;
+            x = y;
+            y = sum;
+        }
+    }
+    return sum;
+}
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
