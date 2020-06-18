@@ -428,6 +428,25 @@ int fib(int N) {
     return sum;
 }
 
+// Leetcode 169
+int majorityElement(vector<int>& nums) {
+    int numberOfTimes = (nums.size() - 1) / 2; // 1
+    unordered_map<int, int> h;
+    
+    for (int i = 0; i < nums.size(); ++i) {
+        h[nums[i]]++;
+    }
+    
+    int outEl;
+    for (auto el : h) {
+        if (el.second > numberOfTimes) {
+            outEl = el.first;
+            break;
+        }
+    }
+    return outEl;
+}
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
