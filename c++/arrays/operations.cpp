@@ -428,23 +428,16 @@ int fib(int N) {
     return sum;
 }
 
-// Leetcode 169
-int majorityElement(vector<int>& nums) {
-    int numberOfTimes = (nums.size() - 1) / 2; // 1
-    unordered_map<int, int> h;
+// Leetcode 217
+bool containsDuplicate(vector<int>& nums) {
+    unordered_set<int> set;
     
-    for (int i = 0; i < nums.size(); ++i) {
-        h[nums[i]]++;
-    }
+    if (nums.size() == 0 || nums.size() == 1) return false;
     
-    int outEl;
-    for (auto el : h) {
-        if (el.second > numberOfTimes) {
-            outEl = el.first;
-            break;
-        }
+    for (int &i : nums) {
+        set.insert(i);
     }
-    return outEl;
+    return set.size() == nums.size() ? false : true;
 }
 
 int main(int argc, const char * argv[]) {
