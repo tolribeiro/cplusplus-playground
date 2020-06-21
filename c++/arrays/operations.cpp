@@ -11,6 +11,8 @@
 #include <math.h>
 #include <map>
 #include <unordered_set>
+#include <unordered_map>
+#include <fstream>
 
 using namespace std;
 
@@ -440,6 +442,51 @@ bool containsDuplicate(vector<int>& nums) {
     return set.size() == nums.size() ? false : true;
 }
 
+void calculate_codes_number_of_times() {
+    string line;
+    ifstream myfile ("/Users/thiagoribeiro/Desktop/output.txt");
+    unordered_map<string, int>h;
+    unordered_set<string>set;
+    
+    if (myfile.is_open()) {
+        while (myfile.good()) {
+            getline (myfile, line);
+//            cout << line.substr(0, line.find("-") - 1) << endl;
+            h[line.substr(0, line.find("-") - 1)]++;
+            set.insert(line.substr(0, line.find("-") - 1));
+        }
+        myfile.close();
+        for (auto &el : set) {
+            cout << el << " - " << h[el] << " times" << endl;
+        }
+    } else {
+        cout << "Unable to open file";
+    }
+    
+}
+
+bool isBadVersion(int x) {
+    return x % 2 == 0 ? false : true;
+}
+
+// 278 Leetcode Bad Version
+int firstBadVersion(int n) {
+    int i = 0;
+    int j = n;
+    int firstBadVersion = 0;
+    // 1 2 3 4 5
+    while (i <= j) {
+        int mid = i + (j - i) / 2;
+        if (isBadVersion(mid)) {
+            firstBadVersion = mid;
+            j = mid - 1;
+        } else {
+            i = mid + 1;
+        }
+    }
+    return firstBadVersion;
+}
+
 int main(int argc, const char * argv[]) {
     vector<int> a = {1, 7};
 
@@ -501,7 +548,7 @@ int main(int argc, const char * argv[]) {
 //    reorderLogFiles(in);
     
 //    addStrings("1", "9");
-    
+    calculate_codes_number_of_times();
     return 0;
 }
 

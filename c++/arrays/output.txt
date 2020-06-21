@@ -1,0 +1,110 @@
+code: 5 - description: Transação não autorizada 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 1 - description: Dados inválidos 
+code: 3 - description: Politica do banco emissor 
+code: 5 - description: Transação não autorizada 
+code: 11 - description: Desconhecido 
+code: 5 - description: Transação não autorizada 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor 
+code: 5 - description: Transação não autorizada 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor 
+code: 11 - description: Desconhecido 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 11 - description: Desconhecido 
+code: 11 - description: Desconhecido 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor 
+code: 1 - description: Dados inválidos 
+code: 1 - description: Dados inválidos 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 5 - description: Transação não autorizada 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 11 - description: Desconhecido 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 1 - description: Dados inválidos 
+code: 11 - description: Desconhecido 
+code: 11 - description: Desconhecido 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor 
+code: 11 - description: Desconhecido 
+code: 5 - description: Transação não autorizada 
+code: 1 - description: Dados inválidos 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 5 - description: Transação não autorizada 
+code: 10 - description: Transação não processada 
+code: 10 - description: Transação não processada 
+code: 5 - description: Transação não autorizada 
+code: 10 - description: Transação não processada 
+code: 10 - description: Transação não processada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 1 - description: Dados inválidos 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 5 - description: Transação não autorizada 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 7 - description: Política do Moip 
+code: 3 - description: Politica do banco emissor 
+code: 3 - description: Politica do banco emissor
+code: 3 - description: Politica do banco emissor

@@ -43,6 +43,7 @@
 		629F5AD622DB905E00436973 /* Rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle.cpp; sourceTree = "<group>"; };
 		629F5ADA22DB955500436973 /* basic_recursion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = basic_recursion.cpp; sourceTree = "<group>"; };
 		629F5ADC22DBA24800436973 /* math_recursion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = math_recursion.cpp; sourceTree = "<group>"; };
+		62A099E2249DCF23006175BE /* output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.txt; sourceTree = "<group>"; };
 		62E37C4D228EF6A80075FB4E /* playground.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = playground.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				621A24C5227B87930088DD50 /* operations.cpp */,
+				62A099E2249DCF23006175BE /* output.txt */,
 			);
 			path = arrays;
 			sourceTree = "<group>";
