@@ -451,7 +451,6 @@ void calculate_codes_number_of_times() {
     if (myfile.is_open()) {
         while (myfile.good()) {
             getline (myfile, line);
-//            cout << line.substr(0, line.find("-") - 1) << endl;
             h[line.substr(0, line.find("-") - 1)]++;
             set.insert(line.substr(0, line.find("-") - 1));
         }
@@ -485,6 +484,26 @@ int firstBadVersion(int n) {
         }
     }
     return firstBadVersion;
+}
+
+vector<string> commonChars(vector<string>& A) {
+    vector<string> out;
+    int count = 0;
+    
+    // [e, l, b, a]
+    for (int j = 0; j < A[0].size(); ++j) {
+        for (int i = 1; i <= A.size() - 1; i++) {
+            if (A[i].find(A[0][j]) != std::string::npos) {
+                count++;
+            }
+        }
+        if (count == A.size() - 1) {
+            string s(1, A[0][j]);
+            out.push_back(s);
+        }
+        count = 0;
+    }
+    return out;
 }
 
 int main(int argc, const char * argv[]) {
@@ -548,7 +567,9 @@ int main(int argc, const char * argv[]) {
 //    reorderLogFiles(in);
     
 //    addStrings("1", "9");
-    calculate_codes_number_of_times();
+//    calculate_codes_number_of_times();
+    vector<string> x = {"bella","label","roller"};
+    commonChars(x);
     return 0;
 }
 
