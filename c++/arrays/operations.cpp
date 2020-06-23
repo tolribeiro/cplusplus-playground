@@ -487,23 +487,16 @@ int firstBadVersion(int n) {
 }
 
 vector<string> commonChars(vector<string>& A) {
-    vector<string> out;
-    int count = 0;
+    long n = A.size();
+    if (n == 0) return {};
+    unordered_map<char, int> result;
+    string first = A[0];
+    // creating hashmap for first word
+    for (auto &c : first) result[c]++;
     
-    // [e, l, b, a]
-    for (int j = 0; j < A[0].size(); ++j) {
-        for (int i = 1; i <= A.size() - 1; i++) {
-            if (A[i].find(A[0][j]) != std::string::npos) {
-                count++;
-            }
-        }
-        if (count == A.size() - 1) {
-            string s(1, A[0][j]);
-            out.push_back(s);
-        }
-        count = 0;
+    for (int i = 1; i < n; ++i) {
+        unordered_map<char, int> temp, temp2;
     }
-    return out;
 }
 
 int main(int argc, const char * argv[]) {
